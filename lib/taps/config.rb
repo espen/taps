@@ -4,6 +4,8 @@ require 'taps/version'
 
 Sequel.datetime_class = DateTime
 
+YAML::ENGINE.yamler = 'psych'
+
 module Taps
   def self.exiting=(val)
     @@exiting = val
